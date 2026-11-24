@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Explore NoteFlow tools for capturing ideas, organizing notes and documents, and helping teams work together.">
+  <meta name="theme-color" content="#101725">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NoteFlow — Ideas come together">
+  <meta property="og:description" content="Capture ideas, organize notes and documents, and bring your team together with NoteFlow.">
+  <meta name="twitter:card" content="summary">
+  <title>NoteFlow — Collaborative Notes and Team Workspaces</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="landing.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="landing.js" defer></script>
+ 
+</head>   
+ 
+<body>  
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="brand-intro" aria-hidden="true">
+  <div class="brand-intro-content">
+    <svg class="brand-intro-mark" viewBox="0 0 96 96">
+      <rect class="brand-intro-tile" x="4" y="4" width="88" height="88" rx="25"/>
+      <path class="brand-intro-n" d="M29 68V28h9l29 31V28h10v40h-9L39 37v31z"/>
+      <path class="brand-intro-flow" d="M24 77c15-5 33-5 49 0"/>
+    </svg>
+    <span class="brand-intro-name">NoteFlow</span>
+    <span class="brand-intro-caption">Ideas come together.</span>
+  </div>
+</div> 
+<header>
+  <!--< NAVIGATION BAR -->
+  <nav id="header" class="navbar" aria-label="Primary navigation">
+    <a href="#about-noteFlow">About NoteFlow</a> 
+     
+    <a href="#features">Features</a>
+    <a id="logo" href="#" class="logo">
+      <svg class="logo-mark" viewBox="0 0 36 36" aria-hidden="true">
+        <rect x="2" y="2" width="32" height="32" rx="10" fill="#526b91"/>
+        <path d="M11 25V11h3.2l8 9.1V11H26v14h-3.1l-8.1-9.2V25z" fill="#fff"/>
+      </svg>
+      <span>NoteFlow</span>
+    </a>
+    <a id="login-signup" href="#login-panel" class="nav-button" data-login-link>Login / Sign Up</a>
+  </nav> 
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <!-- HERO: headline, subheadline and main button -->
+    <section id="hero" class="hero">
+      <h1 id="hero-title">welcome to NoteFlow!</h1>
+      <h2 id="hero-subtitle">A workshop for collaborative team working</h2>
+    
+      <div id="hero-actions" class="hero-actions">
+        <a id="cta-login" class="cta-button" href="#login-panel" data-login-link>Login</a>
+        <a id="cta-notes" class="cta-button notes-button" href="noteflow.html">Notes</a>
+      </div>
+    </section>
+    <section id="about-noteFlow" class="know-about"> 
+<h2 id="about-title">About NoteFlow</h2> 
+    <p id="about-description">Live group collaboration, shared notes and ideas, organized brainstorming, polished documents, AI-powered insights.</p>
+    </section> 
+    <section id="features" class="features">
+      <nav id="feature-menu" class="feature-menu" aria-label="Feature categories">
+        <a id="feature-menu-all" class="feature-menu-link" href="#features" data-category="all" aria-current="true">All</a>
+        <a id="feature-menu-work" class="feature-menu-link" href="#features" data-category="work">Work &amp; Projects</a>
+        <a id="feature-menu-academics" class="feature-menu-link" href="#features" data-category="academics">Academics &amp; Learning</a>
+        <a id="feature-menu-team" class="feature-menu-link" href="#features" data-category="team">Team Collaboration</a>
+        <a id="feature-menu-sharing" class="feature-menu-link" href="#features" data-category="casual">Fun &amp; Casual</a>
+      </nav>
+     <div id="feature-real-time" class="feature-container" data-categories="work team"> 
+        <div class="feature-heading">
+          <h3>Real-Time Collaboration</h3>
+          <details class="feature-details">
+            <summary aria-label="Show details about Real-Time Collaboration">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span class="visually-hidden">Details: Real-Time Collaboration</span>
+            </summary>
+            <p>Real-Time Collaboration gives a group one shared place to work instead of passing separate notes and document versions back and forth. A student team can collect research and shape a presentation together; colleagues can review a project plan and add ideas while a meeting is happening. As people contribute, the group can follow the evolving work and keep the discussion connected to the material being created.</p>
+            <p>This is useful when members are in different places or when everyone needs to participate in the same session. The goal is to help the group stay aligned, see contributions in context, and move from discussion toward a shared result.</p>
+          </details>
+        </div>
+        <p>Create a shared workspace for your class group or project team. Everyone can add ideas, see updates, and work on the same material together, even from different places.</p>
+        </div> 
+        <div id="feature-organized" class="feature-container" data-categories="work academics">
+          <div class="feature-heading">
+            <h3>Organized Brainstorming</h3>
+            <details class="feature-details">
+              <summary aria-label="Show details about Organized Brainstorming">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8.5 14.5A7 7 0 1 1 15.5 14.5c-.9.7-1.5 1.5-1.5 2.5h-4c0-1-.6-1.8-1.5-2.5Z"/><path d="M12 2v2M4.93 4.93l1.42 1.42M2 12h2M19.07 4.93l-1.42 1.42M20 12h2"/></svg>
+                <span class="visually-hidden">Details: Organized Brainstorming</span>
+              </summary>
+              <p>Organized Brainstorming helps a group go from a lot of scattered thoughts to a plan people can understand. Start by collecting suggestions from everyone, then group related points, highlight priorities, and identify questions that still need answers. For a class assignment, a study group might sort research into sections; for a work project, colleagues might turn meeting notes into tasks and agree on what to tackle first.</p>
+              <p>Keeping ideas and next steps together makes it easier for everyone to see how the plan was formed and where they can contribute. The group can return to the organized notes as the work develops.</p>
+            </details>
+          </div>
+          <p>Collect everyone's thoughts in one place, group related ideas, and decide what to do next. Use it to plan a class assignment, divide project tasks, or capture ideas during a team meeting.</p>
+      </div>
+        <div id="feature-doc-generation" class="feature-container" data-categories="work academics">
+          <div class="feature-heading">
+            <h3>Professional Document Generation</h3>
+            <details class="feature-details">
+              <summary aria-label="Show details about Professional Document Generation">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>
+                <span class="visually-hidden">Details: Professional Document Generation</span>
+              </summary>
+              <p>Professional Document Generation helps turn group notes and collected ideas into a more complete piece of work, such as a project report, presentation, meeting summary, or class assignment. Begin with the material your group has already gathered, arrange it into a clear structure, and develop the sections together rather than starting over in separate files.</p>
+              <p>Before sharing, the group can review the wording, check that the important points are included, and make revisions so the final document reflects everyone's work. It is intended to help with the transition from brainstorming to a presentable result; the group remains responsible for checking accuracy and deciding what to submit or share.</p>
+            </details>
+          </div>
+          <p>Turn your group's notes and research into a polished report, assignment, or project document. Collaborators can shape the content together and share the finished work.</p>
+        </div>
+        <div id="feature-mind" class="feature-container" data-categories="casual team">
+          <div class="feature-heading">
+            <h3>YOUR OWN MIND</h3>
+            <details class="feature-details">
+              <summary aria-label="Show details about Your Own Mind">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-4 12.75c.7.5 1 1.05 1 1.75h6c0-.7.3-1.25 1-1.75A7 7 0 0 0 12 3Z"/><path d="M9 21h6M10 18h4M12 7v4M10 9h4"/></svg>
+                <span class="visually-hidden">Details: Your Own Mind</span>
+              </summary>
+              <p>YOUR OWN MIND is for expressing an idea in your own style, whether that means making a presentation, laying out a concept, or collecting thoughts on an idea board. You can develop it on your own first, then bring it to a class discussion, project review, or team meeting to explain what you have in mind.</p>
+              <p>When you are ready to collaborate, share it with the group and invite people to contribute or edit according to the permissions you choose. This keeps your original idea personal while still making it possible to turn that idea into a shared piece of work.</p>
+            </details>
+          </div>
+          <p>Create your own presentation or idea board, then share it in a live meeting. Let classmates or teammates contribute and edit in real time with the permissions you choose.</p>
+        </div>
+        <div id="feature-ai-insights" class="feature-container" data-categories="work academics team"> 
+        <div class="feature-heading">
+          <h3>AI-Powered Insights</h3>
+          <details class="feature-details">
+            <summary aria-label="Show details about AI-Powered Insights">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 3 6-7"/><path d="M17 6h4v4"/></svg>
+              <span class="visually-hidden">Details: AI-Powered Insights</span>
+            </summary>
+            <p>AI-Powered Insights can help a group review the notes and ideas it has collected. For example, after a discussion it may help produce a short recap, bring attention to themes that appear more than once, or suggest questions the group could explore next. A study group could use a recap to revisit key topics; a project team could use it to review decisions and possible next steps.</p>
+            <p>AI output is a starting point for discussion, not a guaranteed answer. Group members should check summaries against their original notes, correct anything that is missing or inaccurate, and decide together which suggestions are useful before relying on them.</p>
+          </details>
+        </div>
+        <p>After a group discussion, use AI to summarize shared notes, spot common themes, suggest next steps, or help a study group review the ideas it collected.</p>
+        </div>
+        <div id="feature-sharing" class="feature-container" data-categories="casual team">
+        <div class="feature-heading">
+          <h3>fun and sharing</h3>
+          <details class="feature-details">
+            <summary aria-label="Show details about Fun and Sharing">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-.99L3 21l1.99-5.5A8.4 8.4 0 0 1 4 11.5 8.5 8.5 0 1 1 21 11.5Z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg>
+              <span class="visually-hidden">Details: Fun and Sharing</span>
+            </summary>
+            <p>Fun and Sharing is a more relaxed space for the things a group wants to write about outside formal work. Share a personal note, a short story, an article, or something that happened during the day. Friends can respond, add their own thoughts, and keep a conversation going around the post.</p>
+            <p>Groups can also use it to explore a common interest, exchange recommendations, or simply keep in touch. It is for informal expression and connection, whether the topic is gaming, coding, paranormal stories, or another interest everyone enjoys.</p>
+          </details>
+        </div>
+        <p>Write notes, stories, or articles about everyday life and share them with friends or your group.</p>
+        <p>Start a relaxed conversation around shared interests, from gaming and coding to anything your group enjoys.</p>
+        </div>
+        <div id="feature-ai-playground" class="feature-container" data-categories="casual team">
+          <div class="feature-heading">
+            <h3>AI Idea Playground</h3>
+            <details class="feature-details">
+              <summary aria-label="Show details about AI Idea Playground">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"/><path d="m19 14 1.1 2.9L23 18l-2.9 1.1L19 22l-1.1-2.9L15 18l2.9-1.1L19 14Z"/></svg>
+                <span class="visually-hidden">Details: AI Idea Playground</span>
+              </summary>
+              <p>AI Idea Playground is a low-pressure way to get a group creating when nobody knows what to start with. Use a playful prompt to kick things off, then have friends or teammates add their own suggestions, combine ideas, and take the conversation in unexpected directions. It can be used for a fun group activity or as a warm-up before a more focused brainstorm.</p>
+              <p>AI-generated suggestions may be surprising or imperfect, so treat them as inspiration rather than finished answers. The people in the group choose what to keep, change, or ignore, and can build the final idea together.</p>
+            </details>
+          </div>
+          <p>Use playful AI prompts to spark ideas with friends, classmates, or teammates. Build on each other's suggestions and turn a casual chat into a creative group brainstorm.</p>
+        </div>
+      </section>
+  </main>
+
+  <dialog id="login-panel" class="login-panel" aria-labelledby="login-title">
+    <div class="login-panel-heading">
+      <div>
+        <p class="login-eyebrow">Welcome back</p>
+        <h2 id="login-title">Log in to NoteFlow</h2>
+      </div>
+      <button class="login-close" type="button" aria-label="Close login panel" data-login-close>&times;</button>
+    </div>
+    <p class="login-description">Pick up where your team left off.</p>
+    <form id="login-form" class="login-form">
+      <div class="login-mode" role="group" aria-label="Account action">
+        <button id="login-mode-signin" type="button" class="login-mode-button is-active" aria-pressed="true">Log in</button>
+        <button id="login-mode-signup" type="button" class="login-mode-button" aria-pressed="false">Sign up</button>
+      </div>
+      <label for="username" id="username-label">Username</label>
+      <input id="username" name="username" type="text" autocomplete="name" placeholder="Enter your name">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" minlength="6" placeholder="Enter your password" required>
+      <p id="invite-help">Get an invite code from your team administrator.</p>
+      <label for="invite-code">Invite Code</label>
+      <input id="invite-code" name="invite-code" type="text" placeholder="Enter your invite code">
+
+      <button id="login-submit" class="login-submit" type="submit">Log in</button>
+      <div class="login-divider" aria-hidden="true"><span>or</span></div>
+      <button id="google-signin" class="google-signin" type="button">Continue with Google</button>
+      <p id="login-message" class="login-message" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
+</body>
+</html>
