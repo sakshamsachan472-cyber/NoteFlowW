@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#20263a">
+  <meta name="description" content="Your private NoteFlow workspace for organizing notes, documents, study plans, and team collaboration.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NoteFlow — Student Workspace">
+  <meta property="og:description" content="Organize notes, documents, study plans, and team collaboration in your NoteFlow workspace.">
+  <title>NoteFlow — Student Workspace</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="notelook.css">
+</head>
+<body>   
+  <a class="skip-link" href="#overview">Skip to workspace content</a>
+  <div class="app preview-app">
+    <aside class="side" aria-label="Sidebar">
+      <a class="brand preview-brand" href="LANDINGPAGE.html" aria-label="NoteFlow home">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><path d="M9 27V9h4l14 14V9h4v18h-4L13 13v14z" fill="#fff"/></svg>
+        </div> 
+        <span>NoteFlow</span>
+      </a> 
+   
+      <div class="preview-space">
+        <span class="preview-space-icon" id="workspace-space-icon" aria-hidden="true">N</span>
+        <span><small id="space-kicker">STUDENT SPACE</small><b id="workspace-space-name">My workspace</b></span>
+        <span class="preview-chevron" aria-hidden="true">⌄</span>
+      </div>  
+
+      <nav class="nav preview-nav" id="workspace-navigation" aria-label="Workspace">
+        <a class="on" href="#overview" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></svg><span>Home</span></a>
+        <a href="#work"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg><span id="work-nav-label">My work</span></a>
+        <a href="#files"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10H3z"/><path d="M3 10h18"/></svg><span>Uploaded files</span></a>
+        <a href="#meetings"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg><span id="meetings-nav-label">Study sessions</span></a>
+        <a href="#tasks"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg><span id="tasks-nav-label">Study plan</span></a>
+        <a href="#team" id="team-nav-link"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Team</span><span id="team-invite-count" class="team-invite-count" hidden></span></a>
+        <a href="#guides"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 0 4 22z"/><path d="M4 5.5v14A2.5 2.5 0 0 1 6.5 17H20M8 7h8M8 11h7"/></svg><span>Guides</span></a>
+      </nav>
+
+      <div class="preview-side-bottom">
+        <a class="preview-settings" href="#settings"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span>Settings</span></a>
+        <div class="me preview-me">
+          <div class="av a5" id="workspace-avatar">AK</div>
+          <div><b id="workspace-profile-name">Aarav Kapoor</b><small>Personal workspace</small></div>
+          <span class="preview-more" aria-hidden="true">···</span>
+        </div>
+        <button type="button" class="preview-settings" id="workspace-signout">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="welcome-workspace preview-main" id="overview" tabindex="-1">
+      <header class="welcome-topbar preview-topbar">
+        <div class="preview-topbar-leading">
+          <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-controls="workspace-navigation" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+          <a class="preview-topbar-brand" href="#overview" aria-label="NoteFlow workspace home">
+            <span class="preview-topbar-brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 36 36"><path d="M9 27V9h4l14 14V9h4v18h-4L13 13v14z"/></svg>
+            </span>
+            <span class="preview-topbar-brand-name">NoteFlow</span>
+            <span class="preview-topbar-brand-caption">STUDENT WORKSPACE</span>
+          </a>
+        </div>
+      </header>
+      <button type="button" class="menu-backdrop" id="menu-backdrop" aria-label="Close navigation menu" tabindex="-1"></button>
+      <div class="workspace-side-decor" aria-hidden="true">
+        <svg class="workspace-side-decor-art workspace-side-decor-left" viewBox="0 0 96 620" preserveAspectRatio="none">
+          <path class="workspace-decor-line" d="M20 24v112c0 24 48 24 48 56v78c0 34-48 34-48 68v170"/>
+          <path class="workspace-decor-line workspace-decor-line-soft" d="M20 82h28c12 0 20 8 20 20v16m-48 238h20c12 0 20 8 20 20v34"/>
+          <path class="workspace-decor-trail" d="M20 24v112c0 24 48 24 48 56v78c0 34-48 34-48 68v170"/>
+          <circle class="workspace-decor-node" cx="20" cy="82" r="4"/>
+          <circle class="workspace-decor-node workspace-decor-node-accent" cx="68" cy="192" r="5"/>
+          <circle class="workspace-decor-node" cx="20" cy="338" r="4"/>
+          <circle class="workspace-decor-node workspace-decor-node-accent workspace-decor-traveler" cx="68" cy="432" r="3.5"/>
+          <circle class="workspace-decor-ring" cx="20" cy="508" r="12"/>
+          <circle class="workspace-decor-ring" cx="20" cy="508" r="5"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-violet workspace-decor-orb-float" cx="12" cy="42" r="8"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-blue workspace-decor-orb-float-slow" cx="77" cy="96" r="7"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-mint workspace-decor-orb-float-late" cx="43" cy="145" r="12"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-peach workspace-decor-orb-float-slow" cx="88" cy="225" r="9"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-blue workspace-decor-orb-float" cx="10" cy="263" r="7"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-rose workspace-decor-orb-float-late" cx="79" cy="308" r="11"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-violet workspace-decor-orb-float-slow" cx="39" cy="355" r="8"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-mint workspace-decor-orb-float" cx="90" cy="385" r="6"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-peach workspace-decor-orb-float-late" cx="13" cy="457" r="11"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-blue workspace-decor-orb-float-slow" cx="59" cy="491" r="8"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-rose workspace-decor-orb-float" cx="89" cy="552" r="10"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-violet workspace-decor-orb-float-late" cx="33" cy="589" r="7"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-blue workspace-decor-orb-float-slow" cx="55" cy="185" r="6"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-mint workspace-decor-orb-float" cx="29" cy="225" r="7"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-violet workspace-decor-orb-float-late" cx="70" cy="416" r="8"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-rose workspace-decor-orb-float-slow" cx="45" cy="540" r="6"/>
+        </svg>
+        <svg class="workspace-side-decor-art workspace-side-decor-right" viewBox="0 0 96 620" preserveAspectRatio="none">
+          <path class="workspace-decor-line" d="M20 24v112c0 24 48 24 48 56v78c0 34-48 34-48 68v170"/>
+          <path class="workspace-decor-line workspace-decor-line-soft" d="M20 82h28c12 0 20 8 20 20v16m-48 238h20c12 0 20 8 20 20v34"/>
+          <path class="workspace-decor-trail" d="M20 24v112c0 24 48 24 48 56v78c0 34-48 34-48 68v170"/>
+          <circle class="workspace-decor-node" cx="20" cy="82" r="4"/>
+          <circle class="workspace-decor-node workspace-decor-node-accent" cx="68" cy="192" r="5"/>
+          <circle class="workspace-decor-node" cx="20" cy="338" r="4"/>
+          <circle class="workspace-decor-node workspace-decor-node-accent workspace-decor-traveler" cx="68" cy="432" r="3.5"/>
+          <circle class="workspace-decor-ring" cx="20" cy="508" r="12"/>
+          <circle class="workspace-decor-ring" cx="20" cy="508" r="5"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-violet workspace-decor-orb-float-late" cx="28" cy="52" r="6"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-mint workspace-decor-orb-float" cx="62" cy="118" r="8"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-blue workspace-decor-orb-float-slow" cx="18" cy="162" r="5"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-rose workspace-decor-orb-float-late" cx="77" cy="210" r="11"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-peach workspace-decor-orb-float-slow" cx="47" cy="253" r="7"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-violet workspace-decor-orb-float" cx="14" cy="300" r="9"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-blue workspace-decor-orb-float-late" cx="65" cy="346" r="5"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-mint workspace-decor-orb-float-slow" cx="30" cy="395" r="10"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-rose workspace-decor-orb-float" cx="82" cy="440" r="6"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-peach workspace-decor-orb-float-late" cx="50" cy="478" r="12"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-blue workspace-decor-orb-float-slow" cx="21" cy="535" r="7"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-violet workspace-decor-orb-float" cx="73" cy="585" r="9"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-peach workspace-decor-orb-float-slow" cx="37" cy="86" r="8"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-violet workspace-decor-orb-float-late" cx="89" cy="330" r="7"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-blue workspace-decor-orb-float" cx="53" cy="575" r="6"/>
+          <circle class="workspace-decor-orb workspace-decor-orb-rose workspace-decor-orb-float-slow" cx="8" cy="399" r="7"/>
+        </svg>
+      </div>
+      <p class="workspace-global-error" id="workspace-error" role="status" hidden></p>
+
+      <section class="personal-dashboard preview-dashboard solo-dashboard" id="solo-dashboard" aria-labelledby="preview-title">
+        <div class="preview-greeting">
+          <div>
+            <p class="welcome-eyebrow" id="preview-date">YOUR STUDY SPACE</p>
+            <h1 id="preview-title"><span id="greeting-text">Good morning</span>, <span id="workspace-greeting-name">Aarav</span> <span id="greeting-icon" aria-hidden="true">☀</span></h1>
+            <p id="dashboard-description">A calmer way to keep up with classes, study sessions, projects, and deadlines.</p>
+          </div>
+        </div>
+
+        <section class="solo-create" aria-label="Create something">
+          <button type="button" class="solo-create-card" data-create="presentation">
+            <span class="solo-create-icon solo-note-icon" aria-hidden="true">▤</span>
+            <strong id="action-one-title">Create study slides</strong><span id="action-one-description">Turn class notes into slides for revision</span>
+          </button>
+          <button type="button" class="solo-create-card" data-create="meeting">
+            <span class="solo-create-icon solo-journal-icon" aria-hidden="true">◷</span>
+            <strong id="action-two-title">Start a study session</strong><span id="action-two-description">Set a focus block and capture your notes</span>
+          </button>
+          <button type="button" class="solo-create-card" id="upload-file-button">
+            <span class="solo-create-icon solo-upload-icon" aria-hidden="true">↥</span>
+            <strong id="action-three-title">Upload class files</strong><span id="action-three-description">Keep lecture slides and readings close</span>
+          </button>
+          <div class="solo-more-wrap">
+            <button type="button" class="solo-create-card solo-more-trigger" id="more-create" aria-haspopup="menu" aria-expanded="false" aria-controls="more-create-menu">
+              <span class="solo-create-icon solo-capture-icon" aria-hidden="true">＋</span>
+              <strong id="action-four-title">More</strong><span id="action-four-description">Notes, coursework, and study documents</span>
+            </button>
+            <div class="more-create-menu" id="more-create-menu" role="menu" aria-labelledby="more-create" hidden>
+              <button type="button" role="menuitem" data-more-action="note"><span class="more-menu-icon">✎</span><span><strong>Note</strong><small>Capture a quick thought</small></span></button>
+              <button type="button" role="menuitem" data-more-action="document"><span class="more-menu-icon">▤</span><span><strong>Docs</strong><small>Start a class document</small></span></button>
+              <button type="button" role="menuitem" data-more-action="other"><span class="more-menu-icon">⋯</span><span><strong>Others</strong><small>Create another workspace item</small></span></button>
+            </div>
+          </div>
+        </section>
+
+        <section class="uploaded-files-view" id="files" aria-labelledby="uploaded-files-heading" hidden>
+          <div class="uploaded-files-view-heading">
+            <div>
+              <p class="welcome-eyebrow">YOUR STUDY SPACE</p>
+              <h2 id="uploaded-files-heading">Uploaded files</h2>
+              <p>Keep your class materials in your private workspace storage.</p>
+            </div>
+            <button type="button" class="solo-inline-action" id="upload-file-from-files">＋ Upload files</button>
+          </div>
+          <input id="file-picker" type="file" multiple hidden>
+          <p class="notes-error" id="files-error" role="status" hidden></p>
+          <div class="workspace-file-list" id="workspace-file-list" aria-live="polite"></div>
+          <p class="workspace-storage-note">Private Supabase storage · 25 MB max per file</p>
+        </section>
+        <span id="file-count" hidden>0</span>
+
+        <div class="solo-columns">
+          <div class="solo-main-column">
+            <section class="solo-panel workspace-work-panel" id="work" aria-labelledby="notes-heading">
+              <div class="solo-panel-heading">
+                <div><h2><span id="notes-heading" tabindex="-1">Recent work</span> <span id="note-count"></span></h2><p id="notes-subtitle">Pick up where you left off.</p></div>
+                <div class="work-heading-actions" id="work-heading-actions">
+                  <label class="preview-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="notes-search" type="search" placeholder="Search your work" aria-label="Search workspace work"></label>
+                  <button type="button" class="work-create-document" id="create-document-from-work">New doc</button>
+                </div>
+              </div>
+
+              <form id="note-editor" class="note-editor preview-note-editor" hidden>
+                <button type="button" class="note-editor-back" id="back-note" aria-label="Back to My work"><span aria-hidden="true">←</span> Back to My work</button>
+                <label for="note-title" id="note-title-label">Note title</label>
+                <input id="note-title" name="title" type="text" maxlength="120" required placeholder="Give your document a title">
+                <label for="note-body" id="note-body-label">Your note</label>
+                <textarea id="note-body" name="body" rows="4" required placeholder="Write an outline, meeting notes, or an idea..."></textarea>
+                <div class="note-editor-actions"><button type="button" id="cancel-note">Cancel</button><button type="submit" id="note-save-label">Save note</button></div>
+              </form>
+
+              <section class="document-editor" id="document-editor" aria-label="Document editor" hidden>
+                <div class="document-editor-top">
+                  <button type="button" class="note-editor-back" id="document-back"><span aria-hidden="true">←</span> Back to My work</button>
+                  <span class="document-save-status" id="document-save-status" role="status">Saved locally</span>
+                </div>
+                <label class="sr-only" for="document-title">Document title</label>
+                <input id="document-title" class="document-title-input" type="text" maxlength="120" placeholder="Untitled document">
+                <div class="document-toolbar" id="document-toolbar" role="toolbar" aria-label="Document formatting">
+                  <button type="button" data-doc-command="bold" aria-label="Bold"><strong>B</strong></button>
+                  <button type="button" data-doc-command="italic" aria-label="Italic"><em>I</em></button>
+                  <button type="button" data-doc-command="underline" aria-label="Underline"><u>U</u></button>
+                  <span class="document-toolbar-divider" aria-hidden="true"></span>
+                  <button type="button" data-doc-command="formatBlock" data-doc-value="h1" aria-label="Heading 1">H1</button>
+                  <button type="button" data-doc-command="formatBlock" data-doc-value="h2" aria-label="Heading 2">H2</button>
+                  <button type="button" data-doc-command="formatBlock" data-doc-value="p" aria-label="Paragraph">¶</button>
+                  <span class="document-toolbar-divider" aria-hidden="true"></span>
+                  <button type="button" data-doc-command="insertUnorderedList" aria-label="Bulleted list">• List</button>
+                  <button type="button" data-doc-command="insertOrderedList" aria-label="Numbered list">1. List</button>
+                  <span class="document-toolbar-spacer"></span>
+                  <button type="button" id="document-download">Download .txt</button>
+                  <button type="button" id="document-print">Print / PDF</button>
+                </div>
+                <div id="document-content" class="document-content" contenteditable="true" role="textbox" aria-label="Document text" aria-multiline="true" data-placeholder="Start writing your document..."></div>
+                <p class="document-editor-hint">Changes save automatically in this browser.</p>
+                <p class="notes-error document-error" id="document-error" role="alert" hidden></p>
+              </section>
+
+              <div id="work-list-view">
+                <div class="workspace-work-filters" role="group" aria-label="Filter work by type">
+                  <button type="button" data-work-filter="all" aria-pressed="true">All</button>
+                  <button type="button" data-work-filter="presentations" aria-pressed="false">PPTs</button>
+                  <button type="button" data-work-filter="documents" aria-pressed="false">Docs</button>
+                  <button type="button" data-work-filter="notes" aria-pressed="false">Notes</button>
+                  <button type="button" data-work-filter="starred" aria-pressed="false">Starred</button>
+                </div>
+                <p class="notes-error" id="notes-error" role="status" hidden></p>
+                <div id="notes-list" class="notes-list preview-notes-list solo-notes-list" aria-live="polite"></div>
+                <footer class="preview-footer">Your work stays in your workspace.</footer>
+              </div>
+            </section>
+
+          </div>
+
+          <aside class="solo-side-column" aria-label="Your personal dashboard">
+            <section class="solo-panel solo-focus-panel" id="meetings" aria-labelledby="meeting-heading">
+              <div class="solo-panel-heading">
+                <div><h2 id="meeting-heading">Study sessions</h2><p>Make time for focused learning.</p></div>
+                <button type="button" class="solo-icon-action" data-create="meeting" aria-label="Plan a study session">＋</button>
+              </div>
+              <div class="workspace-meeting-list" id="workspace-meeting-list"></div>
+            </section>
+
+            <section class="solo-panel solo-progress-panel" id="tasks" aria-labelledby="focus-heading">
+              <div class="solo-panel-heading">
+                <div><h2 id="focus-heading">Study plan</h2><p id="tasks-subtitle">Your next steps for today.</p></div>
+                <button type="button" class="solo-icon-action" id="add-task-button" aria-label="Add task">＋</button>
+              </div>
+              <div class="workspace-task-list" id="workspace-task-list"></div>
+              <div class="solo-task-add" id="task-add-form" hidden>
+                <label class="sr-only" for="new-task-input">Task name</label>
+                <input id="new-task-input" type="text" maxlength="100" placeholder="What needs doing?">
+                <button type="button" id="save-task-button">Add</button>
+              </div>
+            </section>
+          </aside>
+        </div>
+
+        <section class="solo-panel recent-uploads-panel" aria-labelledby="recent-uploads-heading">
+          <div class="recent-uploads-heading">
+            <div>
+              <h2 id="recent-uploads-heading">Recent uploads</h2>
+              <p>Your latest files, saved to your private workspace.</p>
+            </div>
+            <button type="button" class="solo-inline-action" id="view-all-uploads">View all uploads</button>
+          </div>
+          <div class="recent-upload-list" id="recent-upload-list" aria-live="polite"></div>
+        </section>
+      </section>
+
+      <section class="team-dashboard" id="team-dashboard" aria-labelledby="team-dashboard-title" hidden>
+        <div class="team-dashboard-heading">
+          <div>
+            <p class="welcome-eyebrow">WORK TOGETHER</p>
+            <h1 id="team-dashboard-title">Your teams</h1>
+            <p id="team-dashboard-description">Create a team or accept an invitation to collaborate.</p>
+          </div>
+          <button type="button" class="solo-inline-action" id="create-team-button">＋ Create team</button>
+        </div>
+        <p id="team-feedback" class="team-feedback" role="status" aria-live="polite" hidden></p>
+        <p id="team-management-warning" class="team-feedback" role="status" aria-live="polite" hidden></p>
+        <section id="team-removal-notice-list" class="team-removal-notice-list" aria-label="Team removal notices" hidden></section>
+        <div class="team-management-grid">
+          <section class="team-management-panel" aria-labelledby="team-list-heading">
+            <h2 id="team-list-heading">Your teams</h2>
+            <div id="team-list" class="team-list"></div>
+          </section>
+          <section class="team-management-panel" aria-labelledby="team-invites-heading">
+            <h2 id="team-invites-heading">Invitations <span id="team-invite-heading-count"></span></h2>
+            <div id="team-invite-list" class="team-invite-list"></div>
+          </section>
+        </div>
+        <section class="team-management-panel team-details-panel" id="team-details" aria-labelledby="team-detail-name" hidden>
+          <div class="team-details-heading">
+            <div>
+              <p class="welcome-eyebrow">TEAM WORKSPACE</p>
+              <h2 id="team-detail-name"></h2>
+              <p id="team-detail-description"></p>
+            </div>
+            <div class="team-details-actions">
+              <button type="button" class="solo-inline-action" id="team-invite-button">＋ Invite friend</button>
+              <button type="button" class="solo-inline-action team-danger-action" id="team-delete-button" hidden>Delete team</button>
+            </div>
+          </div>
+          <h3>Members</h3>
+          <div id="team-member-list" class="team-member-list"></div>
+          <h3>Sent invitations</h3>
+          <div id="team-outgoing-invites" class="team-invite-list"></div>
+          <div class="team-content-grid">
+            <section class="team-management-panel team-content-section" aria-labelledby="team-shared-items-heading">
+              <div class="team-content-heading">
+                <h3 id="team-shared-items-heading">Shared notes &amp; documents</h3>
+                <button type="button" class="solo-inline-action" id="team-item-create">＋ New</button>
+              </div>
+              <div id="team-shared-items" class="team-shared-items"></div>
+            </section>
+            <section class="team-management-panel team-content-section" aria-labelledby="team-shared-tasks-heading">
+              <div class="team-content-heading">
+                <h3 id="team-shared-tasks-heading">Shared tasks</h3>
+                <button type="button" class="solo-inline-action" id="team-task-create">＋ New task</button>
+              </div>
+              <div id="team-shared-tasks" class="team-shared-tasks"></div>
+            </section>
+          </div>
+          <p id="team-collaboration-feedback" class="team-feedback" role="status" aria-live="polite" hidden></p>
+          <div class="team-content-grid team-collaboration-grid">
+            <section class="team-management-panel team-content-section" aria-labelledby="team-requests-heading">
+              <div class="team-content-heading">
+                <h3 id="team-requests-heading">Team requests</h3>
+                <button type="button" class="solo-inline-action" id="team-request-create">＋ Ask the team</button>
+              </div>
+              <p class="team-content-description">Need notes, class timings, or help? Post it so everyone can see.</p>
+              <div id="team-requests" class="team-shared-items" aria-live="polite"></div>
+            </section>
+            <section class="team-management-panel team-content-section" aria-labelledby="team-study-sessions-heading">
+              <div class="team-content-heading">
+                <h3 id="team-study-sessions-heading">Group study sessions</h3>
+                <button type="button" class="solo-inline-action" id="team-session-create">＋ Schedule session</button>
+              </div>
+              <p class="team-content-description">Add a time for the whole team. Everyone in the team can see it.</p>
+              <div id="team-study-sessions" class="team-shared-items" aria-live="polite"></div>
+            </section>
+          </div>
+          <section class="team-management-panel team-content-section team-files-section" aria-labelledby="team-files-heading">
+            <div class="team-content-heading">
+              <h3 id="team-files-heading">Shared files</h3>
+              <div class="team-file-header-actions">
+                <button type="button" class="solo-inline-action" id="team-file-share-existing">Choose from my uploads</button>
+                <button type="button" class="solo-inline-action" id="team-file-upload">＋ Upload new files</button>
+              </div>
+            </div>
+            <p class="team-files-description">Files shared with members of this team.</p>
+            <input id="team-file-picker" type="file" multiple hidden>
+            <p id="team-file-feedback" class="team-feedback" role="status" aria-live="polite" hidden></p>
+            <div id="team-file-list" class="team-file-list" aria-live="polite"></div>
+          </section>
+        </section>
+      </section>
+
+      <section class="presentation-editor" id="presentation-editor" aria-label="Presentation editor" hidden>
+        <header class="presentation-toolbar">
+          <div class="presentation-toolbar-title">
+            <button type="button" class="presentation-back" id="presentation-back" aria-label="Back to My work">←</button>
+            <label class="sr-only" for="presentation-title">Presentation title</label>
+            <input id="presentation-title" type="text" maxlength="100" aria-label="Presentation title">
+            <span class="presentation-save-status" id="presentation-save-status" role="status">Saved</span>
+          </div>
+          <div class="presentation-toolbar-actions">
+            <button type="button" id="presentation-add-rect">▭ Shape</button>
+            <button type="button" id="presentation-add-circle">○ Circle</button>
+            <button type="button" id="presentation-insert-table">▦ Table</button>
+            <button type="button" id="presentation-add-image">▧ Image</button>
+            <input id="presentation-image-picker" type="file" accept="image/*" hidden>
+            <button type="button" id="presentation-duplicate-slide">Duplicate slide</button>
+            <button type="button" id="presentation-delete-slide">Delete slide</button>
+            <button type="button" id="presentation-delete-object">Delete selected</button>
+            <button type="button" class="presentation-export" id="presentation-export">Export PPTX</button>
+          </div>
+        </header>
+        <div class="presentation-editor-body">
+          <aside class="presentation-slides-panel" aria-label="Slides">
+            <div class="presentation-slides-heading"><strong>Slides</strong><button type="button" id="presentation-add-slide" aria-label="Add slide">＋</button></div>
+            <div class="presentation-slide-list" id="presentation-slide-list"></div>
+          </aside>
+          <div class="presentation-work-area">
+            <div class="presentation-canvas-tools">
+              <span>Slide background</span>
+              <label class="sr-only" for="slide-background">Slide background color</label>
+              <select id="slide-background">
+                <option value="#ffffff">White</option>
+                <option value="#f4f6fb">Soft grey</option>
+                <option value="#172033">Midnight</option>
+                <option value="#e9f4f0">Sage</option>
+                <option value="#fff2e5">Warm</option>
+              </select>
+              <label class="sr-only" for="presentation-font-family">Font family</label>
+              <select id="presentation-font-family" aria-label="Font family">
+                <option value="Arial">Arial</option>
+                <option value="Calibri">Calibri</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Courier New">Courier New</option>
+              </select>
+              <label class="sr-only" for="presentation-font-size">Font size</label>
+              <input id="presentation-font-size" type="number" min="8" max="160" value="32" aria-label="Font size">
+              <button type="button" class="presentation-format-bold" id="presentation-format-bold" aria-label="Bold" aria-pressed="false"><strong>B</strong></button>
+              <label class="presentation-font-color-label" for="presentation-font-color" title="Font color">A</label>
+              <input id="presentation-font-color" type="color" value="#263449" aria-label="Font color">
+            </div>
+            <div class="presentation-stage" id="presentation-stage"><canvas id="presentation-canvas" width="1280" height="720" role="img" aria-label="Presentation slide canvas. Use the toolbar to add and edit slide content."></canvas></div>
+            <p class="presentation-export-note">Your deck saves in this browser. Export creates a PowerPoint file with each slide as an image.</p>
+            <p class="presentation-error" id="presentation-error" role="alert" hidden></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace-guides" id="guides" aria-labelledby="guides-title" hidden>
+        <header class="workspace-guides-header">
+          <div>
+            <p class="welcome-eyebrow">NOTEFLOW HELP CENTER</p>
+            <h1 id="guides-title">Guides & tutorials</h1>
+            <p>Quick, practical walkthroughs for everything in your workspace.</p>
+          </div>
+          <a class="workspace-guide-start" href="#work">Start with My work <span aria-hidden="true">→</span></a>
+        </header>
+        <div class="workspace-guide-quickstart" aria-label="Quick start">
+          <strong>New here? Start with these three steps</strong>
+          <ol>
+            <li><a href="#work">Create a note or study deck</a></li>
+            <li><a href="#files">Upload your class files</a></li>
+            <li><a href="#tasks">Add a study-plan task</a></li>
+          </ol> 
+        </div>
+        <div class="workspace-guide-grid">
+          <details class="workspace-guide-card">
+            <summary><span class="workspace-guide-icon" aria-hidden="true">✎</span><span><strong>Notes, docs & coursework</strong><small>Write and organize your work</small></span></summary>
+            <ol>
+              <li>Open <b>More</b> on Home and choose <b>Note</b> or <b>Docs</b>, or open <b>My work</b> and choose <b>New doc</b>.</li>
+              <li>Add a title and your content. Documents save as you type; notes and coursework can be saved from their editor.</li>
+              <li>Return to <b>My work</b> to search, filter, or reopen your items.</li>
+            </ol>
+          </details>
+          <details class="workspace-guide-card">
+            <summary><span class="workspace-guide-icon" aria-hidden="true">▤</span><span><strong>Study slides & presentations</strong><small>Create, edit and export a deck</small></span></summary>
+            <ol>
+              <li>Choose <b>Create study slides</b> from Home and give your deck a name.</li>
+              <li>Add slides, text, shapes, images, or tables with the presentation toolbar. Select objects on the slide to edit them.</li>
+              <li>Choose <b>Export PPTX</b> to download a PowerPoint file. Slides are exported as images.</li>
+            </ol>
+          </details>
+          <details class="workspace-guide-card">
+            <summary><span class="workspace-guide-icon" aria-hidden="true">↥</span><span><strong>Upload & manage files</strong><small>Keep class materials together</small></span></summary>
+            <ol>
+              <li>Choose <b>Upload class files</b> on Home, or open <b>Uploaded files</b> and select <b>Upload files</b>.</li>
+              <li>Pick one or more files. Each file can be up to 25 MB and is stored in your private workspace.</li>
+              <li>Open <b>Recent uploads</b> or <b>Uploaded files</b> to preview, download, or manage your files.</li>
+            </ol>
+          </details>
+          <details class="workspace-guide-card">
+            <summary><span class="workspace-guide-icon" aria-hidden="true">◷</span><span><strong>Study sessions & study plan</strong><small>Make time and track next steps</small></span></summary>
+            <ol>
+              <li>On Home, choose <b>Plan a study session</b> to add a focused study block.</li>
+              <li>In <b>Study plan</b>, choose <b>Add task</b> and enter what you want to work on.</li>
+              <li>Mark tasks complete as you finish them; use the session and task panels to review your plan.</li>
+            </ol>
+          </details>
+          <details class="workspace-guide-card">
+            <summary><span class="workspace-guide-icon" aria-hidden="true">♧</span><span><strong>Teams & selected file sharing</strong><small>Collaborate without sharing everything</small></span></summary>
+            <ol>
+              <li>Open <b>Team</b> to create a team or accept an invitation. Team owners can invite members.</li>
+              <li>Post a request for notes, class timing, or help, or schedule a group study session so every team member can see it.</li>
+              <li>Choose <b>Choose from my uploads</b> to copy selected personal files to the team. Your personal originals stay private.</li>
+              <li>Request authors can mark their request received; owners and editors can manage shared team files.</li>
+            </ol>
+          </details>
+          <details class="workspace-guide-card">
+            <summary><span class="workspace-guide-icon" aria-hidden="true">⌕</span><span><strong>Find work & recent uploads</strong><small>Pick up where you left off</small></span></summary>
+            <ol>
+              <li>Use the search field in <b>My work</b> to find notes and documents by title or content.</li>
+              <li>Use the work filters to show presentations, docs, notes, or starred items.</li>
+              <li>Open a file from <b>Recent uploads</b>, or choose <b>View all uploads</b> for your full file list.</li>
+            </ol>
+          </details>
+        </div>
+      </section>
+    </main>
+  </div>
+  <dialog class="workspace-dialog" id="workspace-dialog" aria-labelledby="dialog-title">
+    <form method="dialog" class="workspace-dialog-form" id="workspace-dialog-form">
+      <button type="button" class="dialog-close" id="dialog-close" aria-label="Close dialog">×</button>
+      <p class="welcome-eyebrow" id="dialog-eyebrow">WORKSPACE</p>
+      <h2 id="dialog-title">Create in your workspace</h2>
+      <p id="dialog-description">Give this a name to get started.</p>
+      <label for="dialog-name" id="dialog-name-label">Name</label>
+      <input id="dialog-name" name="name" type="text" maxlength="100" required placeholder="Add a name">
+      <label for="dialog-details" id="dialog-details-label">Details <span>(optional)</span></label>
+      <textarea id="dialog-details" name="details" rows="3" placeholder="Add a few details"></textarea>
+      <label for="dialog-date" id="dialog-date-label" hidden>Date and time</label>
+      <input id="dialog-date" name="date" type="datetime-local" hidden>
+      <p class="workspace-dialog-error" id="workspace-dialog-error" role="alert" hidden></p>
+      <div class="workspace-dialog-actions"><button type="button" id="dialog-cancel">Cancel</button><button type="submit" id="dialog-submit">Create</button></div>
+    </form>
+  </dialog>
+  <dialog class="file-preview-dialog" id="file-preview-dialog" aria-labelledby="file-preview-title">
+    <header class="file-preview-header">
+      <h2 id="file-preview-title">File preview</h2>
+      <button type="button" class="dialog-close" id="file-preview-close" aria-label="Close preview">×</button>
+    </header>
+    <div class="file-preview-body">
+      <div class="file-preview-content" id="file-preview-content"></div>
+      <div class="file-preview-fallback" id="file-preview-fallback" hidden>
+        <p id="file-preview-message"></p>
+        <a id="file-preview-download" download>Download file</a>
+      </div>
+    </div>
+    <p class="file-preview-note">Preview depends on the file type and browser support.</p>
+  </dialog>
+  <dialog class="workspace-dialog presentation-table-dialog" id="presentation-table-dialog" aria-labelledby="presentation-table-title">
+    <form class="workspace-dialog-form" id="presentation-table-form">
+      <button type="button" class="dialog-close" id="presentation-table-close" aria-label="Close dialog">×</button>
+      <p class="welcome-eyebrow">PRESENTATION</p>
+      <h2 id="presentation-table-title">Insert a table</h2>
+      <p>Choose the number of rows and columns for your slide.</p>
+      <div class="presentation-table-size">
+        <label for="presentation-table-rows">Rows
+          <input id="presentation-table-rows" name="rows" type="number" min="1" max="12" value="3" required>
+        </label>
+        <label for="presentation-table-columns">Columns
+          <input id="presentation-table-columns" name="columns" type="number" min="1" max="10" value="4" required>
+        </label>
+      </div>
+      <p class="workspace-dialog-error" id="presentation-table-error" role="alert" hidden></p>
+      <div class="workspace-dialog-actions">
+        <button type="button" id="presentation-table-cancel">Cancel</button>
+        <button type="submit">Insert table</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="workspace-dialog team-dialog" id="team-dialog" aria-labelledby="team-dialog-title">
+    <form class="workspace-dialog-form" id="team-form">
+      <button type="button" class="dialog-close" id="team-dialog-close" aria-label="Close dialog">×</button>
+      <p class="welcome-eyebrow">TEAM WORKSPACE</p>
+      <h2 id="team-dialog-title">Create a team workspace</h2>
+      <p>Set up a shared home for your team's presentations, meetings, and files.</p>
+      <label for="team-name">Team workspace name</label>
+      <input id="team-name" name="name" type="text" maxlength="80" required placeholder="e.g. Studio North">
+      <label for="team-description">What is this team for? <span>(optional)</span></label>
+      <textarea id="team-description" name="description" rows="3" maxlength="240" placeholder="A short description to help your team get oriented"></textarea>
+      <p class="workspace-dialog-error" id="team-dialog-error" role="alert" hidden></p>
+      <div class="workspace-dialog-actions">
+        <button type="button" id="team-dialog-cancel">Cancel</button>
+        <button type="submit">Create workspace</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="workspace-dialog team-dialog" id="team-invite-dialog" aria-labelledby="team-invite-title">
+    <form class="workspace-dialog-form" id="team-invite-form">
+      <button type="button" class="dialog-close" id="team-invite-close" aria-label="Close invite dialog">×</button>
+      <p class="welcome-eyebrow">TEAM INVITATION</p>
+      <h2 id="team-invite-title">Invite a friend</h2>
+      <p>They’ll see this invitation in their Team section after signing in with this email address.</p>
+      <label for="team-invite-email">Friend’s email</label>
+      <input id="team-invite-email" name="email" type="email" autocomplete="email" required placeholder="friend@example.com">
+      <label for="team-invite-role">Access</label>
+      <select id="team-invite-role" name="role">
+        <option value="editor">Can edit</option>
+        <option value="viewer">Can view</option>
+      </select>
+      <p class="workspace-dialog-error" id="team-invite-error" role="alert" hidden></p>
+      <div class="workspace-dialog-actions">
+        <button type="button" id="team-invite-cancel">Cancel</button>
+        <button type="submit" id="team-invite-submit">Send invitation</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="workspace-dialog team-dialog" id="team-item-dialog" aria-labelledby="team-item-dialog-title">
+    <form class="workspace-dialog-form" id="team-item-form">
+      <button type="button" class="dialog-close" id="team-item-close" aria-label="Close shared item dialog">×</button>
+      <p class="welcome-eyebrow">SHARED TEAM WORK</p>
+      <h2 id="team-item-dialog-title">New shared note</h2>
+      <label for="team-item-type">Type</label>
+      <select id="team-item-type" name="type">
+        <option value="team-note">Note</option>
+        <option value="team-document">Document</option>
+      </select>
+      <label for="team-item-title">Title</label>
+      <input id="team-item-title" name="title" type="text" maxlength="160" required>
+      <label for="team-item-body">Content</label>
+      <textarea id="team-item-body" name="body" rows="6" maxlength="20000" placeholder="Write something for your team"></textarea>
+      <p class="workspace-dialog-error" id="team-item-error" role="alert" hidden></p>
+      <div class="workspace-dialog-actions">
+        <button type="button" id="team-item-cancel">Cancel</button>
+        <button type="submit" id="team-item-save">Save</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="workspace-dialog team-dialog" id="team-task-dialog" aria-labelledby="team-task-dialog-title">
+    <form class="workspace-dialog-form" id="team-task-form">
+      <button type="button" class="dialog-close" id="team-task-close" aria-label="Close task dialog">×</button>
+      <p class="welcome-eyebrow">TEAM TASK</p>
+      <h2 id="team-task-dialog-title">New shared task</h2>
+      <label for="team-task-title">Task</label>
+      <input id="team-task-title" name="title" type="text" maxlength="160" required placeholder="What needs to be done?">
+      <label for="team-task-details">Details <span>(optional)</span></label>
+      <textarea id="team-task-details" name="details" rows="3" maxlength="4000"></textarea>
+      <label for="team-task-assignee">Assignee</label>
+      <select id="team-task-assignee" name="assignee"></select>
+      <label for="team-task-due">Due date <span>(optional)</span></label>
+      <input id="team-task-due" name="due" type="datetime-local">
+      <label for="team-task-status">Status</label>
+      <select id="team-task-status" name="status">
+        <option value="open">Open</option>
+        <option value="in_progress">In progress</option>
+        <option value="done">Done</option>
+      </select>
+      <p class="workspace-dialog-error" id="team-task-error" role="alert" hidden></p>
+      <div class="workspace-dialog-actions">
+        <button type="button" id="team-task-cancel">Cancel</button>
+        <button type="submit" id="team-task-save">Save task</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="workspace-dialog team-dialog" id="team-request-dialog" aria-labelledby="team-request-dialog-title">
+    <form class="workspace-dialog-form" id="team-request-form">
+      <button type="button" class="dialog-close" id="team-request-close" aria-label="Close request dialog">×</button>
+      <p class="welcome-eyebrow">ASK YOUR TEAM</p>
+      <h2 id="team-request-dialog-title">Post a team request</h2>
+      <p>Everyone in this team can see your request.</p>
+      <label for="team-request-category">What do you need?</label>
+      <select id="team-request-category" name="category">
+        <option value="notes">Notes or class material</option>
+        <option value="class_timing">Class timing</option>
+        <option value="study_help">Study help</option>
+        <option value="other">Something else</option>
+      </select>
+      <label for="team-request-title">Short request</label>
+      <input id="team-request-title" name="title" type="text" maxlength="140" required placeholder="e.g. Can someone share today's chemistry notes?">
+      <label for="team-request-details">More details <span>(optional)</span></label>
+      <textarea id="team-request-details" name="details" rows="3" maxlength="2000" placeholder="Add context that will help your team"></textarea>
+      <p class="workspace-dialog-error" id="team-request-error" role="alert" hidden></p>
+      <div class="workspace-dialog-actions">
+        <button type="button" id="team-request-cancel">Cancel</button>
+        <button type="submit" id="team-request-save">Post request</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="workspace-dialog team-dialog" id="team-session-dialog" aria-labelledby="team-session-dialog-title">
+    <form class="workspace-dialog-form" id="team-session-form">
+      <button type="button" class="dialog-close" id="team-session-close" aria-label="Close study session dialog">×</button>
+      <p class="welcome-eyebrow">GROUP STUDY SESSION</p>
+      <h2 id="team-session-dialog-title">Schedule for your team</h2>
+      <p>All members of this team will be able to see the session time.</p>
+      <label for="team-session-title">Session name</label>
+      <input id="team-session-title" name="title" type="text" maxlength="140" required placeholder="e.g. Biology exam revision">
+      <label for="team-session-start">Date and start time</label>
+      <input id="team-session-start" name="starts_at" type="datetime-local" required>
+      <label for="team-session-duration">Duration</label>
+      <select id="team-session-duration" name="duration">
+        <option value="30">30 minutes</option>
+        <option value="45">45 minutes</option>
+        <option value="60" selected>1 hour</option>
+        <option value="90">1 hour 30 minutes</option>
+        <option value="120">2 hours</option>
+      </select>
+      <label for="team-session-details">Plan or meeting link <span>(optional)</span></label>
+      <textarea id="team-session-details" name="details" rows="3" maxlength="2000" placeholder="What should everyone bring or prepare?"></textarea>
+      <p class="workspace-dialog-error" id="team-session-error" role="alert" hidden></p>
+      <div class="workspace-dialog-actions">
+        <button type="button" id="team-session-cancel">Cancel</button>
+        <button type="submit" id="team-session-save">Schedule for team</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="workspace-dialog team-dialog" id="team-file-share-dialog" aria-labelledby="team-file-share-title">
+    <form class="workspace-dialog-form" id="team-file-share-form">
+      <button type="button" class="dialog-close" id="team-file-share-close" aria-label="Close file sharing dialog">×</button>
+      <p class="welcome-eyebrow">SHARE WITH THIS TEAM</p>
+      <h2 id="team-file-share-title">Choose files to share</h2>
+      <p>Select only the personal uploads you want to copy into this team's shared files.</p>
+      <p id="team-file-share-error" class="workspace-dialog-error" role="status" hidden></p>
+      <div id="team-file-share-list" class="team-file-share-list" aria-live="polite"></div>
+      <div class="workspace-dialog-actions">
+        <button type="button" id="team-file-share-cancel">Cancel</button>
+        <button type="submit" id="team-file-share-submit" disabled>Share selected files</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="workspace-dialog team-dialog" id="team-member-remove-dialog" aria-labelledby="team-member-remove-title">
+    <form class="workspace-dialog-form" id="team-member-remove-form">
+      <button type="button" class="dialog-close" id="team-member-remove-close" aria-label="Close member removal dialog">×</button>
+      <p class="welcome-eyebrow">TEAM MEMBERSHIP</p>
+      <h2 id="team-member-remove-title">Remove team member</h2>
+      <p id="team-member-remove-description"></p>
+      <label for="team-member-remove-reason">Reason (required)</label>
+      <textarea id="team-member-remove-reason" name="reason" rows="4" maxlength="1000" required placeholder="Explain why this person is being removed"></textarea>
+      <p class="workspace-dialog-error" id="team-member-remove-error" role="alert" hidden></p>
+      <div class="workspace-dialog-actions">
+        <button type="button" id="team-member-remove-cancel">Cancel</button>
+        <button type="submit" class="team-danger-action">Remove member</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="workspace-dialog team-dialog" id="work-share-team-dialog" aria-labelledby="work-share-team-title">
+    <form class="workspace-dialog-form" id="work-share-team-form">
+      <button type="button" class="dialog-close" id="work-share-team-close" aria-label="Close team sharing dialog">×</button>
+      <p class="welcome-eyebrow">SHARE A COPY WITH YOUR TEAM</p>
+      <h2 id="work-share-team-title">Share work</h2>
+      <p id="work-share-team-description">Your personal original stays private. The selected team receives a separate copy.</p>
+      <label for="work-share-team-select">Team</label>
+      <select id="work-share-team-select" name="team" required></select>
+      <p id="work-share-team-error" class="workspace-dialog-error" role="alert" hidden></p>
+      <p id="work-share-team-status" class="team-feedback" role="status" hidden></p>
+      <div class="workspace-dialog-actions">
+        <button type="button" id="work-share-team-cancel">Cancel</button>
+        <button type="submit" id="work-share-team-submit">Share copy</button>
+      </div>
+    </form>
+  </dialog>
+  <script src="vendor/fabric.min.js" defer></script>
+  <script src="vendor/pptxgen.bundle.js" defer></script>
+  <script src="workspace-preview.js" defer></script> 
+</body> 
+</html>
